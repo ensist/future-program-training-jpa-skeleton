@@ -12,7 +12,6 @@ import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
 
 @MappedSuperclass
-@EntityListeners(value = {AuditingEntityListener.class})
 abstract class BaseEntity implements Serializable {
 
   @Id
