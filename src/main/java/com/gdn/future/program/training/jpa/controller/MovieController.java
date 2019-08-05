@@ -21,16 +21,17 @@ public class MovieController {
 
   @GetMapping(ApiPath.MOVIE_BY_MOVIE_ID)
   public Movie findByMovieId(@PathVariable String movieId) {
-    return movieService.findByMovieId(movieId);
+//    return movieService.findByMovieId(movieId);
+    return new Movie();
   }
 
   @PostMapping(ApiPath.MOVIE)
   public Movie save(@RequestBody Movie movie) {
-    return movieService.save(movie);
+    return new Movie();
   }
 
   @DeleteMapping(ApiPath.MOVIE_BY_MOVIE_ID)
   public boolean deleteByMovieId(@PathVariable String movieId) {
-    return movieService.deleteByMovieId(movieId) > 0;
+    return true;
   }
 }
